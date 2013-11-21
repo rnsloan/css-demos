@@ -1,0 +1,54 @@
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+button {
+    width: 2em;
+    height: 2em;
+    margin: 0;
+    background: #5e5e5e;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+
+nav {
+    background: #c0c0c0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: none;
+    padding: 0.8em;
+}
+
+li:first-child,
+.navigation--visible li {
+    display: block;
+}
+
+@media (min-width: 31.563em) {
+    nav {
+        display: inline-block;
+        width: 100%;
+    }
+
+    li {
+        display: inline-block;
+        float: left;
+    }
+
+    li:first-child {
+        display: none;
+    }
+}
