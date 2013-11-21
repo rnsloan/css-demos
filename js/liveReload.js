@@ -1,6 +1,8 @@
 var active = true;
 
-if (active) {
+var isIE = navigator.userAgent.indexOf('Trident');
+
+if (active && isIE === '-1') {
     runLiveReload();
 }
 
