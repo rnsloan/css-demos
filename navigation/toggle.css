@@ -1,0 +1,34 @@
+nav {
+    background: #c0c0c0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: none;
+    padding: 0.8em;
+}
+
+li:first-child,
+#nav:target li {
+    display: block;
+}
+
+@media (min-width: 31.563em) {
+    nav {
+        display: inline-block;
+        width: 100%;
+    }
+
+    li {
+        display: inline-block;
+        float: left;
+    }
+
+    li:first-child {
+        display: none;
+    }
+}
