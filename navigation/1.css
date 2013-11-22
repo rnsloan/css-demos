@@ -16,6 +16,14 @@ button {
     background: #5e5e5e;
     border: 3px solid #fff;
     border-radius: 5px;
+    background: transparent url(nav_bg.png) no-repeat -1px 1px;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    button {
+        background-image: url(nav_bg@2x.png);
+        background-size: 27px 24px;
+    }
 }
 
 nav {
