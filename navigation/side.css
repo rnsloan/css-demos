@@ -1,0 +1,131 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#inner-wrap {
+    position: relative;
+    width: 100%;
+    left: 0%;
+}
+
+.navigation--visible #inner-wrap {
+    left: 70%;
+}
+
+header {
+    min-height: 4em;
+    background: #000;
+}
+
+header a {
+    display: inline-block;
+    margin: 0.7em 0 0 0.5em;
+    padding: 0 0 0 1.5em;
+    background: transparent url(side_nav_bg.png) no-repeat 0 0;
+    background: rgba(0,0,0,0) url(side_nav_bg.svg) no-repeat 0 0;
+    background-size: 35px 28px;
+    opacity: 0.7;
+    color: #fff;
+    text-decoration: none;
+    line-height: 1;
+    font-size: 27px;
+    font-size: 1.7rem;
+}
+
+header a:hover,
+header a:focus,
+header a:active {
+    opacity: 1;
+}
+
+nav {
+    background: #000;
+}
+
+.navigation--visible nav {
+   width: 70%;
+   left: -70%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 3em 0 0 0.3em;
+}
+
+li {
+    display: none;
+}
+
+.navigation--visible li {
+    display: block;
+}
+
+li a {
+    color: #9c9c9c;
+    text-decoration: none;
+    font-size: 24px;
+    font-size: 1.5rem;
+}
+
+li a:hover,
+li a:focus,
+li a:active {
+    color: #fff;
+}
+
+.navigation--visible .close-nav {
+    display: block;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    top: 0;
+    left: 0;
+    margin: 0.5em;
+    background: transparent url(side_cross_bg.png) no-repeat 0 0;
+    background: rgba(0,0,0,0) url(side_cross_bg.svg) no-repeat 0 0;
+    background-size: 32px 32px;
+    opacity: 0.7;
+}
+
+.close-nav:hover,
+.close-nav:focus,
+.close-nav:active {
+    opacity: 1;
+}
+
+@media (min-width: 38em) {
+    header a {
+        display: none;
+    }
+
+    nav {
+        padding: 0 0 0.3em;
+    }
+
+    ul {
+        margin: 0;
+        display: block;
+        text-align: center;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 0.5em;
+    }
+
+    li a {
+        font-size: 21px;
+        font-size: 1.3rem;
+    }
+
+    .close-nav {
+        display: none;
+    }
+}
