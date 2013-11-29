@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/vendor/normalize.css">
 
     <link rel="stylesheet" href="complex.css">
-    <script src="../js/vendor/respond.min.js"></script>
+    <!--respond.min.js moved down to Modernizer load-->
 
     <script src="../js/vendor/modernizr.js"></script>
 </head>
@@ -85,62 +85,19 @@
 </div>
 
 <script src="../js/vendor/addEventListener.js"></script>
-<script src="../js/vendor/matchMedia.js"></script>
+
 <script>
-
-    function sectionNavigation() {
-        var navButton = document.getElementsByTagName('button')[0],
-                nav = document.getElementsByTagName('nav')[0];
-
-        navButton.addEventListener('click', toggleSectionNavigation, false);
-
-        function toggleSectionNavigation() {
-            if (nav.className.indexOf('js-section-nav-visible') !== -1) {
-                nav.className = nav.className.replace('js-section-nav-visible', '');
-                window.location.hash = '';
-            } else {
-                nav.className += ' js-section-nav-visible';
-                window.location.hash = 'nav';
-            }
-        }
-
-        //on page load
-        if (window.location.hash === '#nav') {
-            toggleSectionNavigation();
-        }
-    }
-
-    function subSectionNavigation() {
-        var headingLinks = document.querySelectorAll('.js-sub-nav__heading a');
-
-        for (var i = 0, len = headingLinks.length; i < len; i++) {
-            headingLinks[i].addEventListener('click', function() {toggleSubSectionNavigation(this)}, false);
-        }
-
-        function toggleSubSectionNavigation(anchorElement) {
-            var nav = anchorElement.parentNode.parentNode;
-
-            if (nav.className.indexOf('js-sub-section-nav-visible') !== -1) {
-                nav.className = nav.className.replace('js-sub-section-nav-visible', '');
-            } else {
-                nav.className += ' js-sub-section-nav-visible';
-            }
-
-        }
-
-        //http://stackoverflow.com/a/4051677
-        function isWhitespace(node) {
-            return node.nodeType == 3 && /^\s*$/.test(node.data);
-        }
-    }
-
-
-    sectionNavigation();
-
-    if (!matchMedia('only screen and (min-width: 50em)').matches) {
-        subSectionNavigation();
-    }
+    Modernizr.load([
+        {
+            test: window.matchMedia,
+            yep: "../js/vendor/harvey.js",
+            //loading order important for matchMedia requests to work in IE8
+            nope: ["../js/vendor/matchMedia.js","../js/vendor/respond.min.js"]
+        },
+        "../js/navigation/complex.js"
+    ]);
 </script>
+
 
 <script src="../js/liveReload.js"></script>
 </body>
