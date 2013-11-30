@@ -18,7 +18,13 @@
         }
 
         li {
-            padding: 0.1em 0;
+            padding: 0.3em 0 0;
+        }
+
+        li small {
+            display: block;
+            color: #9b9b9b;
+            font-style: italic;
         }
 
         /* target / context = result  */
@@ -30,8 +36,7 @@
 
 <p>This project is a collection of responsive patterns built with HTML and CSS.</p>
 
-<p>Unless otherwise stated, the default oldest browser tested against is Internet Explorer 8. Media query support for
-    this browser is provided by <a href="https://github.com/scottjehl/Respond/">respond.js</a>.</p>
+<p>Unless otherwise stated, the default oldest browser tested against is Internet Explorer 8.</p>
 
 <h2>Layout</h2>
 
@@ -46,11 +51,23 @@
 
 <h2>Navigation</h2>
 <ul>
-    <li><a href="navigation/">Hide / reveal with button</a></li>
+    <li>
+        <a href="navigation/">Hide / reveal with button</a>
+        <small>addEventListener, retina image</small>
+    </li>
     <li><a href="navigation/toggle.html">Display navigation with :toggle selector (no JavaScript)</a> <strong>IE9+</strong></li>
-    <li><a href="navigation/side.html">Off-canvas side menu</a></li>
-    <li><a href="navigation/complex.html">Top and side</a></li>
-    <li><a href="navigation/select.html">Select input</a> (JavaScript events for side navigation do not change on window resize for IE8)</li>
+    <li>
+        <a href="navigation/side.html">Off-canvas side menu</a>
+        <small>addEventListener, svg with png fallback</small>
+    </li>
+    <li>
+        <a href="navigation/complex.html">Top and side</a> (JavaScript events for side navigation do not change on window resize for IE8)
+        <small>matchMedia, harvey.js, Modernizr.load</small>
+    </li>
+    <li>
+        <a href="navigation/select.html">Select input</a>
+        <small>addEventListener</small>
+    </li>
 </ul>
 
 <hr />
