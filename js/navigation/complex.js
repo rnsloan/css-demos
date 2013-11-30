@@ -31,7 +31,6 @@ function subSectionNavigation(state) {
 }
 
 function toggleSubSectionNavigation(e) {
-    console.log('fired');
     var target = e.target || e.srcElement,
         nav = target.parentNode.parentNode;
 
@@ -41,7 +40,6 @@ function toggleSubSectionNavigation(e) {
         nav.className += ' js-sub-section-nav-visible';
     }
 }
-
 
 sectionNavigation();
 
@@ -61,4 +59,3 @@ if (window.Harvey) {
         subSectionNavigation('on');
     }
 }
-

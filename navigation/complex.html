@@ -84,19 +84,18 @@
         ullamcorper urna.</p>
 </div>
 
-<script src="../js/vendor/addEventListener.js"></script>
-
 <script>
     Modernizr.load([
+        "../js/vendor/matchMedia.js",
         {
-            test: window.matchMedia,
+            test: document.addEventListener,
             yep: "../js/vendor/harvey.js",
-            //loading order important for matchMedia requests to work in IE8
-            nope: ["../js/vendor/matchMedia.js","../js/vendor/respond.min.js"]
+            nope: ["../js/vendor/addEventListener.js","../js/vendor/respond.min.js"]
         },
         "../js/navigation/complex.js"
     ]);
 </script>
+
 
 
 <script src="../js/liveReload.js"></script>
