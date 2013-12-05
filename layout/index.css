@@ -1,0 +1,212 @@
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+.row:after {
+    clear: both;
+}
+
+[class^="col-"] {
+    display: block;
+    float: left;
+    padding: 0 1.5em;
+    width: 100%;
+}
+
+/* 450px */
+@media (min-width: 28.125em) {
+    .col-1 {
+        width: 50%
+    }
+}
+
+/* 640px */
+@media (min-width: 40em) {
+    .col-1 {
+        width: 33.33333%
+    }
+
+    .col-2 {
+        width: 50%
+    }
+
+    .offset-1 {
+        margin-left: 33.33333%;
+    }
+}
+
+/* 1000px */
+@media (min-width: 62.5em) {
+    .col-1 {
+        width: 8.33333%
+    }
+
+    .col-2 {
+        width: 16.66666%
+    }
+
+    .col-3 {
+        width: 25%
+    }
+
+    .col-4 {
+        width: 33.33333%
+    }
+
+    .col-5 {
+        width: 41.66667%
+    }
+
+    .col-6 {
+        width: 50%
+    }
+
+    .col-7 {
+        width: 58.33333%
+    }
+
+    .col-8 {
+        width: 66.66667%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33333%;
+    }
+
+    .col-11 {
+        width: 91.66667%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .offset-1 {
+        margin-left: 8.33333%
+    }
+
+    .offset-2 {
+        margin-left: 16.66666%
+    }
+
+    .offset-3 {
+        margin-left: 25%
+    }
+
+    .offset-4 {
+        margin-left: 33.33333%
+    }
+
+    .offset-5 {
+        margin-left: 41.66667%
+    }
+
+    .offset-6 {
+        margin-left: 50%
+    }
+
+    .offset-7 {
+        margin-left: 58.33333%
+    }
+
+    .offset-8 {
+        margin-left: 66.66667%;
+    }
+
+    .offset-9 {
+        margin-left: 75%;
+    }
+
+    .offset-10 {
+        margin-left: 83.33333%;
+    }
+
+    .offset-11 {
+        margin-left: 91.66667%;
+    }
+}
+
+
+/* ==========================================================================
+   Demonstration purposes
+   ========================================================================== */
+
+.container {
+    margin: 10px;
+}
+
+[class^="col-"] {
+   background: #D8D8D8;
+   outline: 1px solid #c0c0c0;
+}
+
+hr {
+    margin: 1.5em 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 5px;
+    color: #000;
+}
+
+.px {
+    color: red;
+}
+
+@media (min-width: 28.125em) {
+    .px {
+        color: #000;
+    }
+
+    .px450 {
+        color: red;
+    }
+}
+
+@media (min-width: 40em) {
+    .px450 {
+        color: #000;
+    }
+
+    .px640 {
+        color: red;
+    }
+}
+
+@media (min-width: 62.5em) {
+    .px640 {
+        color: #000;
+    }
+
+    .px1000 {
+        color: red;
+    }
+}
