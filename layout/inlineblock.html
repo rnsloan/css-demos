@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grid - em's, inline-block | Layout</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/vendor/normalize.css">
+
+    <link rel="stylesheet" href="inlineblock.css">
+    <script src="../js/vendor/respond.min.js"></script>
+
+    <script src="../js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+
+<h1>12 column grid</h1>
+
+<p>Due to the <a title="Remove whitespace caused by inline-block" href="https://github.com/csswizardry/inuit.css/pull/107">problems</a> <a title="Fighting the Space Between Inline Block Elements" href="http://css-tricks.com/fighting-the-space-between-inline-block-elements/">with</a> white-space and inline-block elements an em and display: inline-block solution is not recommended.</p>
+
+<ul>
+    <li class="px">Default</li>
+    <li class="px450">450px</li>
+    <li class="px642">642px</li>
+    <li class="px1032">1032px</li>
+</ul>
+
+<div class="container">
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1">
+        1
+    </div>
+
+
+    <div class="col-2">
+        2
+    </div>
+    <div class="col-2">
+        2
+    </div>
+
+
+    <div class="col-3">
+        3
+    </div>
+    <div class="col-3">
+        3
+    </div>
+    <div class="col-3">
+        3
+    </div>
+
+
+    <div class="col-4">
+        4
+    </div>
+    <div class="col-4">
+        4
+    </div>
+    <div class="col-4">
+        4
+    </div>
+
+
+    <div class="col-6">
+        6
+    </div>
+    <div class="col-4">
+        4
+    </div>
+    <div class="col-2">
+        2
+    </div>
+
+
+    <div class="col-5">
+        5
+    </div>
+    <div class="col-7">
+        7
+    </div>
+
+</div>
+
+<hr/>
+
+<h2>Offset columns</h2>
+
+<div class="container">
+    <div class="col-1">
+        1
+    </div>
+    <div class="col-1 offset-1">
+        1, offset-1
+    </div>
+
+
+    <div class="col-2">
+        2
+    </div>
+    <div class="col-2 offset-3">
+        2, offset-3
+    </div>
+    <div class="col-2">
+        2
+    </div>
+    <div class="col-3">
+        3
+    </div>
+</div>
+
+<script src="../js/liveReload.js"></script>
+</body>
+</html>

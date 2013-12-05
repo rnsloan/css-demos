@@ -1,0 +1,233 @@
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+.container {
+    display: block;
+    vertical-align: top;
+    line-height: 1;
+    letter-spacing: -0.25em;
+}
+
+.container,
+[class^="col-"] {
+    vertical-align: top;
+    width: 20em;
+}
+
+
+[class^="col-"] {
+    display: inline-block;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+
+/* 450px */
+@media (min-width: 28.125em) {
+    .container,
+    [class^="col-"] {
+        width: 28.125em;
+    }
+
+    .col-1 {
+        width: 14.063em
+    }
+}
+
+/* 642px */
+@media (min-width: 40.125em) {
+    .container {
+        letter-spacing: -0.25em;
+    }
+
+    .container,
+    [class^="col-"] {
+        width: 40.125em
+    }
+
+    .col-1 {
+        width: 13.375em
+    }
+
+    .col-2 {
+        width: 20.063em
+    }
+
+    .offset-1 {
+        margin-left: 13.375em
+    }
+}
+
+/* 1032px */
+@media (min-width: 64.5em) {
+    .container {
+        width: 64.5em;
+        letter-spacing: -0.256em;
+    }
+    .col-1 {
+        width: 5.375em /* 86px */
+    }
+
+    .col-2 {
+        width: 10.750em
+    }
+
+    .col-3 {
+        width: 16.125em
+    }
+
+    .col-4 {
+        width: 21.5em
+    }
+
+    .col-5 {
+        width: 26.875em
+    }
+
+    .col-6 {
+        width: 32.250em
+    }
+
+    .col-7 {
+        width: 37.625em
+    }
+
+    .col-8 {
+        width: 43em
+    }
+
+    .col-9 {
+        width: 48.375em
+    }
+
+    .col-10 {
+        width: 53.750em
+    }
+
+    .col-11 {
+        width: 59.125em
+    }
+
+    .col-12 {
+        width: 64.5em
+    }
+
+    .offset-1 {
+        margin-left: 5.375em
+    }
+
+    .offset-2 {
+        margin-left: 10.750em
+    }
+
+    .offset-3 {
+        margin-left: 16.125em
+    }
+
+    .offset-4 {
+        margin-left: 21.5em
+    }
+
+    .offset-5 {
+        margin-left: 26.875em
+    }
+
+    .offset-6 {
+        margin-left: 32.250em
+    }
+
+    .offset-7 {
+        margin-left: 37.625em
+    }
+
+    .offset-8 {
+        margin-left: 43em
+    }
+
+    .offset-9 {
+        margin-left: 48.375em
+    }
+
+    .offset-10 {
+        margin-left: 53.750em
+    }
+
+    .offset-11 {
+        margin-left: 59.125em
+    }
+
+    .offset-12 {
+        margin-left: 64.5em
+    }
+
+}
+
+/* ==========================================================================
+   Demonstration purposes
+   ========================================================================== */
+
+[class^="col-"] {
+    background: #D8D8D8;
+    outline: 1px solid #c0c0c0;
+}
+
+hr {
+    margin: 1.5em 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    color: #000;
+}
+
+.px {
+    color: red;
+}
+
+@media (min-width: 28.125em) {
+    .px {
+        color: #000;
+    }
+
+    .px450 {
+        color: red;
+    }
+}
+
+@media (min-width: 40.125em) {
+    .px450 {
+        color: #000;
+    }
+
+    .px642 {
+        color: red;
+    }
+}
+
+@media (min-width: 64.5em) {
+    .px642 {
+        color: #000;
+    }
+
+    .px1032 {
+        color: red;
+    }
+}
