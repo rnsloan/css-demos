@@ -231,3 +231,7 @@ ul li {
         color: red;
     }
 }
+
+code {
+    font-size: 0.9em;
+}
