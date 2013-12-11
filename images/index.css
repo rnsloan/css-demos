@@ -6,10 +6,14 @@
     box-sizing: border-box;
 }
 
+.container {
+    float: left;
+    width: 100%;
+    background: #b58e00;
+}
+
 @media (min-width: 62.500em) {
     .container {
-        float: left;
-        width: 100%;
         background: transparent url(bg_cloud.png) no-repeat 0 0;
         background-size: 100%;
     }
