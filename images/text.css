@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    clear: both;
+    margin: 2em 0;
+}
+
+/* ==========================================================================
+   Max-width 100%
+   ========================================================================== */
+
+.max-100 {
+    margin: 0 auto;
+    max-width: 56.250em;
+}
+
+.max-100 p {
+    margin: 1em auto;
+    max-width: 56.250em;
+}
+
+.max-100 img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+@media (min-width: 56.250em) {
+    .max-100 p {
+        margin: 1em 0.313em 1em;
+    }
+}
+
+/* ==========================================================================
+   Limit on max-width
+   ========================================================================== */
+
+.max-limit {
+    margin: 0 auto;
+    max-width: 56.250em;
+}
+
+.max-limit p {
+    margin: 1em auto;
+}
+
+.max-limit img {
+    max-width: 100%;
+}
+
+@media (min-width: 44.688em) {
+    .max-limit img,
+    .max-limit p {
+        float: left;
+        margin: 0 auto 1em;
+    }
+
+    .max-limit img {
+        width: 60%
+    }
+
+    .max-limit p {
+        width: 40%;
+        padding: 0 0.625em;
+    }
+
+    .max-limit p:first-child {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   Cut-off part of image when resizing
+   ========================================================================== */
+
+.cut-off {
+    margin: 0 auto;
+    max-width: 56.250em;
+}
+
+.cut-off p {
+    margin: 1em auto;
+}
+
+.cut-off img {
+    max-width: 100%;
+}
+
+@media (min-width: 44.688em) {
+    .cut-off .image-container {
+        float: left;
+        overflow: hidden;
+        width: 60%;
+        margin: 0 auto 1em;
+    }
+
+    .cut-off .image-container img {
+        max-width: none;
+    }
+
+    .cut-off p {
+        float: left;
+        width: 40%;
+        margin: 0 auto 1em;
+        padding: 0 0.625em;
+    }
+
+    .cut-off p:first-child {
+        float: none;
+        width: 100%;
+    }
+}
