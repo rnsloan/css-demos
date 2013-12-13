@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pixel-density | Images</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/vendor/normalize.css">
+
+    <link rel="stylesheet" href="pixel.css">
+    <script src="../js/vendor/respond.min.js"></script>
+
+    <script src="../js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+    <h1>CSS Background Image</h1>
+
+    <div class="pixel-bg"></div>
+
+    <hr/>
+
+    <h1>&lt;img&gt;</h1>
+
+    <h2>Picturefill</h2>
+
+    <span data-picture data-alt="Sample alt text">
+        <span data-src="200.png"></span>
+        <span data-src="200-2x.png" data-media="(min-device-pixel-ratio: 2.0) , (min-resolution: 192dpi)"></span>
+        <span data-src="400.png" data-media="(min-width: 400px)"></span>
+        <span data-src="400-2x.png" data-media="(min-width: 400px) and (min-resolution: 192dpi)"></span>
+
+        <!-- Fallback content for non-JS browsers -->
+        <noscript>
+            <img src="400.png" alt="Sample alt text">
+        </noscript>
+    </span>
+
+
+    <hr/>
+
+    <h2>Imager.js (BBC News) <strong>IE9+</strong></h2>
+
+    <p style="color:red">Currently not working unless image size is explicitly defined <code>data-width=""</code></p>
+
+    <!--[if lte IE 9]>
+    <div class="delayed-image-load" data-src="{width}{pixel_ratio}.png"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            new Imager({ availableWidths: [200, 400] });
+        });
+    </script>
+
+    <hr/>
+    <![endif]-->
+
+</div>
+
+<script src="../js/images/picturefill.js"></script>
+
+<!--[if lte IE 9]>
+<script src="../js/images/Imager.js"></script>
+<![endif]-->
+
+<script src="../js/liveReload.js"></script>
+</body>
+</html>

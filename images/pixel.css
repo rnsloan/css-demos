@@ -1,0 +1,29 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.pixel-bg {
+    width: 17.5em;
+    height: 12.5em;
+    background: transparent url(bg_pixel.png) no-repeat 0 0;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .pixel-bg {
+        background-image: url(bg_pixel-2x.png);
+        background-size: 17.5em 12.5em;
+    }
+}
+
+img {
+    max-width:100%
+}
