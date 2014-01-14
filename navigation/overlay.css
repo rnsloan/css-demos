@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+/* ==========================================================================
+   Navigation Section
+   ========================================================================== */
+
+.navigation {
+    background: #c0c0c0;
+    padding: 0 0 0.3em;
+}
+
+.navigation__toggle {
+    display: inline-block;
+    margin: 0.7em 0 0 0.5em;
+    padding: 0 0 0 1.5em;
+    background: transparent url(side_nav_bg.png) no-repeat 0 0;
+    background-size: 35px 28px;
+    height: 28px;
+    width: 35px;
+    opacity: 0.7;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navigation__toggle:hover,
+.navigation__toggle:focus,
+.navigation__toggle:active {
+    opacity: 1;
+}
+
+.navigation ul {
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    display: none;
+    padding: 0.8em;
+}
+
+@media (min-width: 38.438em) {
+    .navigation__toggle {
+        display: none;
+    }
+
+    .navigation ul {
+        margin: 0;
+        display: block;
+        text-align: center;
+    }
+
+    .navigation li {
+        display: inline-block;
+        margin: 0 0.5em;
+    }
+
+    .navigation-overlay-visible .navigation ul {
+        display: none;
+    }
+}
+
+
+/* ==========================================================================
+   Navigation Overlay
+   ========================================================================== */
+
+.navigation-overlay,
+.overlay-background {
+    display: none;
+}
+
+.navigation-overlay ul {
+    padding: 0 0 0 1em;
+}
+
+.navigation-overlay li {
+    padding: 0 0 1em;
+}
+
+@media (min-width: 21.875em) {
+    .navigation-overlay li {
+        font-size: 20px;
+        font-size: 1.250rem;
+        color: red;
+    }
+}
+
+.navigation-overlay-visible .navigation-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 00100;
+    background: #c0c0c0;
+    height: 100%;
+    width: 50%;
+}
+
+.navigation-overlay-visible .overlay-background {
+    display: block;
+    position: absolute;
+    z-index: 00010;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .7;
+}
+
