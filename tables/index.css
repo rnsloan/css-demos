@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+body {
+    padding: 0 1em;
+}
+
+table {
+    width: 100%;
+}
+
+table, td, th {
+    border: 1px solid #000;
+    font-size: 12px;
+    font-size: 0.750rem;
+}
+
+td, th {
+    padding: 0.5em;
+}
+
+hr {
+    margin: 1em 0;
+}
+
+/* ==========================================================================
+   Scrollbar
+   ========================================================================== */
+
+.scrollbar {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+@media (min-width: 50em) {
+    .scrollbar td,
+    .scrollbar th {
+        font-size: 16px;
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================================================
+   Definition list (http://blog.easy-designs.net/archives/responsive-tables/)
+   ========================================================================== */
+
+@media (min-width: 50em) {
+    .definition-list td,
+    .definition-list th {
+        font-size: 16px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 40.625em) {
+    .definition-list table {
+        border: 0;
+    }
+
+    .definition-list thead {
+        display: none;
+        visibility: hidden;
+    }
+
+    /* IE 8 + 9 need float, width, clear. All others can just use display: block */
+    .definition-list tbody,
+    .definition-list tr,
+    .definition-list th,
+    .definition-list td {
+        border: 0;
+        float: left;
+        clear: both;
+        width: 100%;
+        text-align: left;
+        white-space: normal;
+    }
+
+    .definition-list th[data-title]:before,
+    .definition-list td[data-title]:before {
+        content: attr(data-title) ":\00A0";
+        font-weight: bold;
+    }
+
+    .definition-list td:empty {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Hide columns
+   ========================================================================== */
+/* can use nth-child for IE9+  */
+.hide-columns .unimportant {
+    display: none;
+}
+
+@media (min-width: 50em) {
+    .hide-columns .unimportant {
+        display: table-cell;
+    }
+}
