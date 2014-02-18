@@ -101,15 +101,15 @@ hr {
     max-width: 100%;
 }
 
-@media (min-width: 44.688em) {
-    .cut-off .image-container {
+@media (min-width: 31.25em) {
+    .cut-off__image-container {
         float: left;
         overflow: hidden;
         width: 60%;
         margin: 0 auto 1em;
     }
 
-    .cut-off .image-container img {
+    .cut-off__image-container img {
         max-width: none;
     }
 
