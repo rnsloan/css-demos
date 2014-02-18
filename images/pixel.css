@@ -11,6 +11,13 @@
     margin: 0 auto;
 }
 
+img {
+    max-width:100%
+}
+
+/* CSS Background Image
+   ========================================================================== */
+
 .pixel-bg {
     width: 17.5em;
     height: 12.5em;
@@ -22,8 +29,4 @@
         background-image: url(bg_pixel-2x.png);
         background-size: 17.5em 12.5em;
     }
-}
-
-img {
-    max-width:100%
 }
