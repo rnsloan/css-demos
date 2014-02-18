@@ -187,47 +187,47 @@ hr {
     margin: 1.5em 0;
 }
 
-ul {
+.active-grid-indicator {
     list-style: none;
     padding: 0;
-}
-
-ul li {
-    display: inline-block;
-    margin: 0 5px 0 0;
     color: #000;
 }
 
-.px {
+.active-grid-indicator > li {
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.active-grid-indicator__px {
     color: red;
 }
 
 @media (min-width: 28.125em) {
-    .px {
+    .active-grid-indicator__px {
         color: #000;
     }
 
-    .px450 {
+    .active-grid-indicator__px450 {
         color: red;
     }
 }
 
 @media (min-width: 40.125em) {
-    .px450 {
+    .active-grid-indicator__px450 {
         color: #000;
     }
 
-    .px642 {
+    .active-grid-indicator__px642 {
         color: red;
     }
 }
 
 @media (min-width: 64.5em) {
-    .px642 {
+    .active-grid-indicator__px642 {
         color: #000;
     }
 
-    .px1032 {
+    .active-grid-indicator__px1032 {
         color: red;
     }
 }

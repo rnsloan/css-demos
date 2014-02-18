@@ -166,47 +166,47 @@ hr {
     margin: 1.5em 0;
 }
 
-ul {
+.active-grid-indicator {
     list-style: none;
     padding: 0;
-}
-
-ul li {
-    display: inline-block;
-    margin: 0 5px;
     color: #000;
 }
 
-.px {
+.active-grid-indicator > li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.active-grid-indicator__px {
     color: red;
 }
 
 @media (min-width: 28.125em) {
-    .px {
+    .active-grid-indicator__px {
         color: #000;
     }
 
-    .px450 {
+    .active-grid-indicator__px450 {
         color: red;
     }
 }
 
 @media (min-width: 40em) {
-    .px450 {
+    .active-grid-indicator__px450 {
         color: #000;
     }
 
-    .px640 {
+    .active-grid-indicator__px640 {
         color: red;
     }
 }
 
 @media (min-width: 62.5em) {
-    .px640 {
+    .active-grid-indicator__px640 {
         color: #000;
     }
 
-    .px1000 {
+    .active-grid-indicator__px1000 {
         color: red;
     }
 }

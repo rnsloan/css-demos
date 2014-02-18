@@ -102,15 +102,14 @@
     secondaryToggle.addEventListener('click', toggleSecondary, false);
 
     function toggleSecondary() {
-        if (body.className.indexOf('secondary--visible') !== -1) {
-            body.className = body.className.replace('secondary--visible', '');
+        if (body.className.indexOf('secondary-is-visible') !== -1) {
+            body.className = body.className.replace('secondary-is-visible', '');
             window.location.hash = '';
         } else {
-            body.className += ' secondary--visible';
+            body.className += ' secondary-is-visible';
             window.location.hash = 'secondary';
         }
-    }
-    ;
+    };
 
     //on page load
     if (window.location.hash === '#secondary') {

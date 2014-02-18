@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+
+/*
+* Screen-readers
+*/
 .sr-only {
     position: absolute;
     width: 1px;
@@ -34,15 +38,14 @@
     right: 0;
 }
 
-.secondary--visible .secondary-toggle {
-    right: 70%;
-
-}
-
 @media (min-width: 31.250em) {
     .secondary-toggle {
         display: none;
     }
+}
+
+.secondary-is-visible .secondary-toggle {
+    right: 70%;
 }
 
 .secondary-toggle__bar {
@@ -54,6 +57,7 @@
     border-radius: 1px;
 }
 
+/* can use nth-child for IE9+  */
 .secondary-toggle__bar + .secondary-toggle__bar {
     margin-top: 0.4em;
 }
@@ -74,7 +78,7 @@
     }
 }
 
-.secondary--visible .container {
+.secondary-is-visible .container {
     right: 70%;
     width: 100%;
 }
