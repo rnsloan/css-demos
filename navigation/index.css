@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -9,7 +13,46 @@
     border: 0;
 }
 
-button {
+/* ==========================================================================
+   Section navigation
+   ========================================================================== */
+
+.section-nav {
+    background: #c0c0c0;
+}
+
+.section-nav__menu {
+    padding: 0;
+    margin: 0;
+}
+
+.section-nav__menu > li {
+    display: none;
+    padding: 0.8em;
+}
+
+.section-nav__menu > li:first-child,
+.section-nav__menu--is-open > li {
+    display: block;
+}
+
+@media (min-width: 31.563em) {
+    .section-nav {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .section-nav__menu > li {
+        display: inline-block;
+        float: left;
+    }
+
+    .section-nav__menu > li:first-child {
+        display: none;
+    }
+}
+
+.section-nav__button {
     width: 2em;
     height: 2em;
     margin: 0;
@@ -20,43 +63,8 @@ button {
 }
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    button {
+    .section-nav__button {
         background-image: url(nav_bg@2x.png);
         background-size: 27px 24px;
-    }
-}
-
-nav {
-    background: #c0c0c0;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    display: none;
-    padding: 0.8em;
-}
-
-li:first-child,
-.navigation--visible li {
-    display: block;
-}
-
-@media (min-width: 31.563em) {
-    nav {
-        display: inline-block;
-        width: 100%;
-    }
-
-    li {
-        display: inline-block;
-        float: left;
-    }
-
-    li:first-child {
-        display: none;
     }
 }

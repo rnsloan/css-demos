@@ -16,10 +16,10 @@
 </head>
 <body>
 
-<nav>
-    <ul>
+<nav class="section-nav">
+    <ul class="section-nav__menu">
         <li>
-            <button>
+            <button class="section-nav__button">
                 <span class="sr-only">Toggle Navigation</span>
             </button>
         </li>
@@ -44,17 +44,17 @@
 
 <script src="../js/vendor/addEventListener.js"></script>
 <script>
-    var navButton = document.getElementsByTagName('button')[0],
-        nav = document.getElementsByTagName('nav')[0];
+    var navButton = document.querySelector('.section-nav__button'),
+        navMenu = document.querySelector('.section-nav__menu');
 
     navButton.addEventListener('click', toggleNavigation, false);
 
     function toggleNavigation() {
-        if ( nav.className.indexOf('navigation--visible') !== -1 ) {
-            nav.className = nav.className.replace('navigation--visible', '');
+        if ( navMenu.className.indexOf('section-nav__menu--is-open') !== -1 ) {
+            navMenu.className = navMenu.className.replace('section-nav__menu--is-open', '');
             window.location.hash = '';
         } else {
-            nav.className += ' navigation--visible';
+            navMenu.className += ' section-nav__menu--is-open';
             window.location.hash = 'nav';
         }
     };
