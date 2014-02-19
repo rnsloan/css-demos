@@ -13,9 +13,8 @@
     border: 0;
 }
 
-
 /* ==========================================================================
-   Navigation Section
+   Navigation Menu
    ========================================================================== */
 
 .navigation {
@@ -42,12 +41,12 @@
     opacity: 1;
 }
 
-.navigation ul {
+.navigation__menu {
     padding: 0;
     margin: 0;
 }
 
-.navigation li {
+.navigation__menu li {
     display: none;
     padding: 0.8em;
 }
@@ -57,67 +56,66 @@
         display: none;
     }
 
-    .navigation ul {
+    .navigation__menu {
         margin: 0;
         display: block;
         text-align: center;
     }
 
-    .navigation li {
+    .navigation__menu li {
         display: inline-block;
         margin: 0 0.5em;
     }
 
-    .navigation-overlay-visible .navigation ul {
+    .overlay-navigation--is-open .navigation__menu {
+        min-height: 2.6875em; /* 43px */
+    }
+
+    .overlay-navigation--is-open .navigation__menu li {
         display: none;
     }
 }
-
 
 /* ==========================================================================
    Navigation Overlay
    ========================================================================== */
 
-.navigation-overlay,
+.overlay-navigation,
 .overlay-background {
     display: none;
 }
 
-.navigation-overlay ul {
+.overlay-navigation__menu {
     padding: 0 0 0 1em;
 }
 
-.navigation-overlay li {
+.overlay-navigation__menu li {
     padding: 0 0 1em;
 }
 
 @media (min-width: 21.875em) {
-    .navigation-overlay li {
+    .overlay-navigation__menu li {
         font-size: 20px;
         font-size: 1.250rem;
         color: red;
     }
 }
 
-.navigation-overlay-visible .navigation-overlay {
+.overlay-navigation--is-open .overlay-navigation,
+.overlay-navigation--is-open .overlay-background {
     display: block;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 00100;
-    background: #c0c0c0;
     height: 100%;
     width: 50%;
+    background: #c0c0c0;
 }
 
-.navigation-overlay-visible .overlay-background {
-    display: block;
-    position: absolute;
+.overlay-navigation--is-open .overlay-background {
     z-index: 00010;
-    height: 100%;
     width: 100%;
-    top: 0;
-    left: 0;
     background: #000;
     opacity: .7;
 }
