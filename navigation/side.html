@@ -16,16 +16,15 @@
 </head>
 <body>
 
-<div id="inner-wrap">
+<div class="inner-wrap">
     <header>
-        <a href="#" id="nav-button">
+        <a href="#" id="js-nav-button">
             <span>Menu</span>
         </a>
     </header>
 
-    <nav>
-        <ul>
-
+    <nav class="navigation">
+        <ul class="navigation__menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">Guide</a></li>
             <li><a href="#">Pricing</a></li>
@@ -33,7 +32,7 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-        <a href="#" class="close-nav" id="close-nav"></a>
+        <a href="#" class="navigation__close" id="js-navigation__close"></a>
 
     </nav>
 
@@ -83,19 +82,19 @@
 <script src="../js/vendor/addEventListener.js"></script>
 <script>
     var body = document.body,
-        navButton = document.getElementById('nav-button'),
+        navButton = document.getElementById('js-nav-button'),
         nav = document.getElementsByTagName('nav')[0],
-        closeNavButton = document.getElementById('close-nav');
+        closeNavButton = document.getElementById('js-navigation__close');
 
     navButton.addEventListener('click', toggleNavigation, false);
     closeNavButton.addEventListener('click', toggleNavigation, false);
 
     function toggleNavigation() {
-        if (body.className.indexOf('navigation--visible') !== -1) {
-            body.className = body.className.replace('navigation--visible', '');
+        if (body.className.indexOf('side-navigation--is-visible') !== -1) {
+            body.className = body.className.replace('side-navigation--is-visible', '');
             window.location.hash = '';
         } else {
-            body.className += ' navigation--visible';
+            body.className += ' side-navigation--is-visible';
             window.location.hash = 'nav';
         }
     }
