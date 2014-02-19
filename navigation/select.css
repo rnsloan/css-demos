@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Global
+   ========================================================================== */
 *,
 *:before,
 *:after {
@@ -17,13 +20,17 @@
     border: 0;
 }
 
-nav ul {
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.navigation__menu {
     display: none;
     margin: 0;
     padding: 0;
 }
 
-select {
+.navigation__select {
     width: 90%;
     text-align: center;
     display: block;
@@ -31,16 +38,16 @@ select {
 }
 
 @media (min-width: 38em) {
-    select {
-        display: none;
-    }
-
-    nav {
+    .navigation {
         float: left;
         width: 20%;
     }
 
-    nav ul {
+    .navigation__select {
+        display: none;
+    }
+
+    .navigation__menu {
         margin: 2em 0 0;
         display: block;
     }

@@ -16,12 +16,12 @@
 </head>
 <body>
 
-<nav>
+<nav class="navigation">
     <form>
-        <label for="navigation-select">
+        <label for="navigation__select">
             <span class="sr-only">Navigation</span>
         </label>
-        <select id="navigation-select">
+        <select class="navigation__select" id="navigation__select">
             <option value="/navigation/subsection1">Sub section 1</option>
             <option value="/navigation/subsection2">Sub section 2</option>
             <option value="/navigation/subsection3">Sub section 3</option>
@@ -36,7 +36,7 @@
         </select>
     </form>
 
-    <ul>
+    <ul class="navigation__menu">
         <li><a href="#">Sub section 1</a></li>
         <li><a href="#">Sub section 2</a></li>
         <li><a href="#">Sub section 3</a></li>
@@ -86,7 +86,7 @@
 
 <script src="../js/vendor/addEventListener.js"></script>
 <script>
-    var navigationSelect = document.getElementById('navigation-select');
+    var navigationSelect = document.getElementById('navigation__select');
 
     navigationSelect.addEventListener('change', function() {
         loadPage(this);
