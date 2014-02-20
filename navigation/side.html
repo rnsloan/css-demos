@@ -14,12 +14,12 @@
 
     <script src="../js/vendor/modernizr.js"></script>
 </head>
-<body>
+<body class="side-navigation--is-not-visible">
 
 <div class="inner-wrap">
     <header>
-        <a href="#" id="js-nav-button">
-            <span>Menu</span>
+        <a href="#" class="nav-button" id="js-nav-button">
+            <span class="nav-button__text">Menu</span>
         </a>
     </header>
 
@@ -33,7 +33,6 @@
             <li><a href="#">Contact</a></li>
         </ul>
         <a href="#" class="navigation__close" id="js-navigation__close"></a>
-
     </nav>
 
     <h1>Content</h1>
@@ -81,20 +80,20 @@
 
 <script src="../js/vendor/addEventListener.js"></script>
 <script>
-    var body = document.body,
-        navButton = document.getElementById('js-nav-button'),
-        nav = document.getElementsByTagName('nav')[0],
-        closeNavButton = document.getElementById('js-navigation__close');
+    var bd = document.body,
+            navButton = document.getElementById('js-nav-button'),
+            nav = document.getElementsByTagName('nav')[0],
+            closeNavButton = document.getElementById('js-navigation__close');
 
     navButton.addEventListener('click', toggleNavigation, false);
     closeNavButton.addEventListener('click', toggleNavigation, false);
 
     function toggleNavigation() {
-        if (body.className.indexOf('side-navigation--is-visible') !== -1) {
-            body.className = body.className.replace('side-navigation--is-visible', '');
+        if (bd.className.indexOf('side-navigation--is-visible') !== -1) {
+            bd.className = bd.className.replace('side-navigation--is-visible', 'side-navigation--is-not-visible');
             window.location.hash = '';
         } else {
-            body.className += ' side-navigation--is-visible';
+            bd.className = bd.className.replace('side-navigation--is-not-visible', 'side-navigation--is-visible');
             window.location.hash = 'nav';
         }
     }
