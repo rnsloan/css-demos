@@ -14,7 +14,7 @@
 
     <script src="../js/vendor/modernizr.js"></script>
 </head>
-<body class="side-navigation--is-not-visible">
+<body class="">
 
 <div class="outer-wrap">
     <div class="inner-wrap">
@@ -95,23 +95,21 @@
 <script src="../js/vendor/addEventListener.js"></script>
 <script>
     var bd = document.body,
-            navButton = document.getElementById('js-nav-button'),
-            nav = document.getElementsByTagName('nav')[0],
-            closeNavButton = document.getElementById('js-navigation__close');
+        navButton = document.getElementById('js-nav-button'),
+        closeNavButton = document.getElementById('js-navigation__close');
 
     navButton.addEventListener('click', toggleNavigation, false);
     closeNavButton.addEventListener('click', toggleNavigation, false);
 
     function toggleNavigation() {
         if (bd.className.indexOf('side-navigation--is-visible') !== -1) {
-            bd.className = bd.className.replace('side-navigation--is-visible', 'side-navigation--is-not-visible');
+            bd.className = bd.className.replace('side-navigation--is-visible', '');
             window.location.hash = '';
         } else {
-            bd.className = bd.className.replace('side-navigation--is-not-visible', 'side-navigation--is-visible');
+            bd.className += bd.className = 'side-navigation--is-visible';
             window.location.hash = 'nav';
         }
-    }
-    ;
+    };
 
     //on page load
     if (window.location.hash === '#nav') {
