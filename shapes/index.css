@@ -1,0 +1,70 @@
+article {
+    padding: 0 10px 0;
+}
+
+hr {
+    clear: both;
+}
+
+.circle {
+    float: left;
+    margin: 0 1em 1em 0;
+    width: 50%;
+    max-width: 200px;
+}
+
+@supports (shape-outside: circle()) {
+    .circle {
+        border-radius: 10em;
+        shape-outside: circle(50%);
+    }
+}
+
+.poly-left {
+    float: left;
+    width: 100px;
+    height: 100px;
+    shape-outside: polygon(50% 0, 100% 0, 40% 100%, 0 100%);
+}
+.poly-right {
+    float: right;
+    width: 100px;
+    height: 100px;
+    shape-outside: polygon(0 0, 50% 0, 100% 100%, 40% 100%);
+}
+
+@media (min-width: 31.25em) {
+    .poly-left {
+        width: 200px;
+        height: 200px;
+    }
+    .poly-right {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.flower {
+    width: 100%;
+    max-width: 800px;
+}
+
+@media (min-width: 35em) {
+    .flower {
+        float: right;
+    }
+    @supports (shape-outside: url()) {
+        .flower {
+            shape-outside: url("flower-mask.png");
+            shape-image-threshold: 0.5;
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .flower {
+        width: 400px;
+        margin-left: 10px;
+        shape-outside: none;
+    }
+}
