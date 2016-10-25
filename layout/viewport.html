@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Viewport Units</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/vendor/normalize.css">
+
+    <script src="../js/vendor/respond.min.js"></script>
+
+    <script src="../js/vendor/modernizr.js"></script>
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+        .full-height {
+            background: purple;
+            height: 100vh;
+            width: 200px;
+        }
+        .centered {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            background: lime;
+            height: 60vh;
+            width: 60vw;
+            margin: 20vh 20vw;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="full-height">
+    This column is always the full viewport height
+</div>
+
+<div class="centered">
+    This box is always centered relative to viewport dimensions
+</div>
+
+</body>
+</html>
