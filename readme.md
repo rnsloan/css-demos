@@ -1,5 +1,5 @@
-# CSS playground
+# CSS Demos
 
-[https://rnsloan.github.io/responsive-patterns/](https://rnsloan.github.io/responsive-patterns/)
+[https://rnsloan.github.io/css-demos/](https://rnsloan.github.io/css-demos/)
 
-Playground of HTML and CSS patterns. Some of these are pretty old.
+Demos of HTML and CSS patterns. Some of these are pretty old.
