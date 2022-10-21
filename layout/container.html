@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Container Queries</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/vendor/normalize.css" />
+    <style>
+      body {
+        margin: 0 50px;
+      }
+
+      .articles-featured {
+        max-width: 850px;
+        margin: 0 auto;
+        container-type: inline-size;
+      }
+
+      @container (min-width: 800px) {
+        .article-container {
+          display: grid;
+          grid-template-columns: repeat(3, 250px);
+          gap: 10px;
+        }
+      }
+
+      article {
+        min-width: 250px;
+        border-bottom: 2px solid gray;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Container Queries</h1>
+
+    <p>Article items are displayed differently depending upon the width of the 'container'</p>
+
+    <main>
+      <section class="articles-featured">
+        <h2>Featured</h2>
+        <div class="article-container">
+          <article>
+            <img src="https://dummyimage.com/250x150/000/fff" />
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
+              amet feugiat purus, eget interdum leo. Proin molestie nisi eu
+              tincidunt pulvinar. Donec eu lacus pellentesque, venenatis purus
+              vel, ornare ipsum. Nullam dapibus elementum odio, nec semper
+              ligula volutpat ac. Donec fermentum sem sed euismod ullamcorper.
+            </p>
+          </article>
+
+          <article>
+            <img src="https://dummyimage.com/250x150/000/fff" />
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
+              amet feugiat purus, eget interdum leo. Proin molestie nisi eu
+              tincidunt pulvinar. Donec eu lacus pellentesque, venenatis purus
+              vel, ornare ipsum. Nullam dapibus elementum odio, nec semper
+              ligula volutpat ac. Donec fermentum sem sed euismod ullamcorper.
+            </p>
+          </article>
+
+          <article>
+            <img src="https://dummyimage.com/250x150/000/fff" />
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
+              amet feugiat purus, eget interdum leo. Proin molestie nisi eu
+              tincidunt pulvinar. Donec eu lacus pellentesque, venenatis purus
+              vel, ornare ipsum. Nullam dapibus elementum odio, nec semper
+              ligula volutpat ac. Donec fermentum sem sed euismod ullamcorper.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>All</h2>
+        <div class="article-container">
+          <article>
+            <img src="https://dummyimage.com/250x150/000/fff" />
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
+              amet feugiat purus, eget interdum leo. Proin molestie nisi eu
+              tincidunt pulvinar. Donec eu lacus pellentesque, venenatis purus
+              vel, ornare ipsum. Nullam dapibus elementum odio, nec semper
+              ligula volutpat ac. Donec fermentum sem sed euismod ullamcorper.
+            </p>
+          </article>
+
+          <article>
+            <img src="https://dummyimage.com/250x150/000/fff" />
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
+              amet feugiat purus, eget interdum leo. Proin molestie nisi eu
+              tincidunt pulvinar. Donec eu lacus pellentesque, venenatis purus
+              vel, ornare ipsum. Nullam dapibus elementum odio, nec semper
+              ligula volutpat ac. Donec fermentum sem sed euismod ullamcorper.
+            </p>
+          </article>
+
+          <article>
+            <img src="https://dummyimage.com/250x150/000/fff" />
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
+              amet feugiat purus, eget interdum leo. Proin molestie nisi eu
+              tincidunt pulvinar. Donec eu lacus pellentesque, venenatis purus
+              vel, ornare ipsum. Nullam dapibus elementum odio, nec semper
+              ligula volutpat ac. Donec fermentum sem sed euismod ullamcorper.
+            </p>
+          </article>
+
+          <article>
+            <img src="https://dummyimage.com/250x150/000/fff" />
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
+              amet feugiat purus, eget interdum leo. Proin molestie nisi eu
+              tincidunt pulvinar. Donec eu lacus pellentesque, venenatis purus
+              vel, ornare ipsum. Nullam dapibus elementum odio, nec semper
+              ligula volutpat ac. Donec fermentum sem sed euismod ullamcorper.
+            </p>
+          </article>
+
+          <article>
+            <img src="https://dummyimage.com/250x150/000/fff" />
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
+              amet feugiat purus, eget interdum leo. Proin molestie nisi eu
+              tincidunt pulvinar. Donec eu lacus pellentesque, venenatis purus
+              vel, ornare ipsum. Nullam dapibus elementum odio, nec semper
+              ligula volutpat ac. Donec fermentum sem sed euismod ullamcorper.
+            </p>
+          </article>
+
+          <article>
+            <img src="https://dummyimage.com/250x150/000/fff" />
+            <h3>Heading</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
+              amet feugiat purus, eget interdum leo. Proin molestie nisi eu
+              tincidunt pulvinar. Donec eu lacus pellentesque, venenatis purus
+              vel, ornare ipsum. Nullam dapibus elementum odio, nec semper
+              ligula volutpat ac. Donec fermentum sem sed euismod ullamcorper.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
